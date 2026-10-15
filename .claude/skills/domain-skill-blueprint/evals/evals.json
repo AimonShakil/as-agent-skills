@@ -1,0 +1,64 @@
+{
+  "skill_name": "domain-skill-blueprint",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "What skills should we build for our Finance & Accounting team? We're a 500-person B2B SaaS company running NetSuite, Bill.com and Salesforce, US + UK entities, preparing for SOX next year. Give me the core skill library and how the skills chain together.",
+      "expected_output": "Department-level library (~10-30) across R2R, P2P, O2C, FP&A etc., SOX-aware human checkpoints, workflows, don't-build list, roadmap.",
+      "files": [],
+      "assertions": [
+        "Total skill count is between 10 and 30",
+        "Addresses SOX explicitly (controls, segregation of duties, or audit evidence) in skills or checkpoints",
+        "Includes regulated-domain defaults: agents draft rather than execute, and calculations run in scripts",
+        "Skill names are kebab-case verb-object and contain no role/region/customer/campaign specifics",
+        "Includes an explicit 'don't build' list naming an alternative (prompt, template, system feature, script, or human-only) for each item",
+        "Every core skill appears in at least one workflow chain",
+        "Workflows mark explicit human checkpoints for high-risk decisions",
+        "Includes a consolidation/merge log showing which candidates were merged or parameterized",
+        "Does not present a skill count or the 10-30 range as an 'industry standard'",
+        "Includes a phased build roadmap",
+        "Knowledge-only items (brand voice, policies, personas, templates) are treated as reference packs, not counted as skills",
+        "Includes specific questions to validate with a domain expert, each tied to the skill(s) it would change"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "we're only rolling out agents to our corporate treasury team (4 people: cash positioning, FX hedging, bank relationships, debt covenants). how many claude skills do we actually need and which ones?",
+      "expected_output": "Narrow sub-function: honestly lands under 10 (roughly 5-12) without padding, explains why, suggests sharing foundation skills with parent Finance.",
+      "files": [],
+      "assertions": [
+        "Total skill count (excluding conditional/optional ones) is 9 or fewer",
+        "Explains why the count is small and/or recommends sharing foundation skills with the parent Finance function",
+        "Skill names are kebab-case verb-object and contain no role/region/customer/campaign specifics",
+        "Includes an explicit 'don't build' list naming an alternative (prompt, template, system feature, script, or human-only) for each item",
+        "Every core skill appears in at least one workflow chain",
+        "Workflows mark explicit human checkpoints for high-risk decisions",
+        "Includes a consolidation/merge log showing which candidates were merged or parameterized",
+        "Does not present a skill count or the 10-30 range as an 'industry standard'",
+        "Includes a phased build roadmap",
+        "Knowledge-only items (brand voice, policies, personas, templates) are treated as reference packs, not counted as skills",
+        "Includes specific questions to validate with a domain expert, each tied to the skill(s) it would change"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our marketing team has built ~70 separate prompts/skills over the last year (stuff like 'linkedin post for product launch', 'linkedin post for webinar', 'blog intro SEO', 'blog outline for case study', 'email subject lines black friday', 'competitor teardown acme', etc). Nobody can find anything. Help me figure out what the core skill library should actually be and what we retire.",
+      "expected_output": "Consolidates sprawl into a parameterized core library, shows merge mapping from old prompts to new skills, retire list.",
+      "files": [],
+      "assertions": [
+        "Total skill count is between 10 and 30",
+        "Maps example legacy prompts (e.g. 'linkedin post for webinar', 'competitor teardown acme') to the new consolidated skills",
+        "Includes a retire list / migration plan for the legacy prompts",
+        "Skill names are kebab-case verb-object and contain no role/region/customer/campaign specifics",
+        "Includes an explicit 'don't build' list naming an alternative (prompt, template, system feature, script, or human-only) for each item",
+        "Every core skill appears in at least one workflow chain",
+        "Workflows mark explicit human checkpoints for high-risk decisions",
+        "Includes a consolidation/merge log showing which candidates were merged or parameterized",
+        "Does not present a skill count or the 10-30 range as an 'industry standard'",
+        "Includes a phased build roadmap",
+        "Knowledge-only items (brand voice, policies, personas, templates) are treated as reference packs, not counted as skills",
+        "Includes specific questions to validate with a domain expert, each tied to the skill(s) it would change"
+      ]
+    }
+  ]
+}
