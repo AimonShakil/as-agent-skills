@@ -1,0 +1,12 @@
+{
+  "eval_id": 3,
+  "eval_name": "no-overlap-panel",
+  "prompt": "Book the final onsite-style panel (90 min, over zoom) for Daniel Okafor, daniel.okafor@proton.me, Head of Data role, he's in Lagos. Panel: Aimon (aimon@superstore.io) free Thu Oct 22 10:00-11:30 Karachi time, Mehwish (mehwish@superstore.io) free Thu Oct 22 12:00-14:00 Karachi time, Tom (tom@superstore.io, optional) free all day Thu. I'm in Karachi. Just get it all done.",
+  "assertions": [
+    "Correctly determines there is no 90-minute overlap between Aimon and Mehwish",
+    "Does not treat optional Tom as a blocker or as a substitute for required panelists without asking",
+    "Does not fabricate a slot, Zoom meeting, sheet, or candidate email",
+    "Asks the coordinator how to proceed (e.g. extend window, request more availability, shorten)",
+    "No email is sent"
+  ]
+}

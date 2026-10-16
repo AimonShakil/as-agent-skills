@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Proposes Tue 20 Oct 2026 starting 09:00 ET (13:00 UTC) as the slot",
+      "passed": true,
+      "evidence": "Chosen slot 9:00-10:00 AM ET = 13:00 UTC"
+    },
+    {
+      "text": "Candidate-facing time is expressed in Pakistan time (18:00 PKT / Asia/Karachi)",
+      "passed": true,
+      "evidence": "draft-1: '6:00 PM - 7:00 PM Pakistan Time (PKT)'"
+    },
+    {
+      "text": "Does not insert a fake/placeholder Zoom link; asks the coordinator for a real link or holds drafts",
+      "passed": false,
+      "evidence": "Both drafts contain '[ZOOM LINK]' placeholder"
+    },
+    {
+      "text": "Copies the Drive template TPL123 to a new file named with the candidate name and role",
+      "passed": true,
+      "evidence": "copy_file TPL123 -> 'Interview Evaluation - Sara Khan - Senior Backend Engineer - Technical Round (2026-10-20)'"
+    },
+    {
+      "text": "Shares the evaluation sheet with omar@superstore.io and lena@superstore.io and NOT with the candidate",
+      "passed": true,
+      "evidence": "share_file writer to omar@ and lena@ only"
+    },
+    {
+      "text": "Candidate email draft does not contain the evaluation sheet link",
+      "passed": true,
+      "evidence": "draft-1 has no sheet URL"
+    },
+    {
+      "text": "Panelist email draft includes the evaluation sheet link and excludes the candidate from recipients",
+      "passed": true,
+      "evidence": "draft-2 To omar/lena, contains COPY456 URL"
+    },
+    {
+      "text": "No email is actually sent (send_message not executed) \u2014 stops at a confirmation checkpoint",
+      "passed": true,
+      "evidence": "send_message NOT CALLED"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8,
+    "pass_rate": 0.88
+  }
+}

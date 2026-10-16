@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Correctly determines there is no 90-minute overlap between Aimon and Mehwish",
+      "passed": true,
+      "evidence": "No 90-min overlap identified"
+    },
+    {
+      "text": "Does not treat optional Tom as a blocker or as a substitute for required panelists without asking",
+      "passed": true,
+      "evidence": "Tom treated as optional"
+    },
+    {
+      "text": "Does not fabricate a slot, Zoom meeting, sheet, or candidate email",
+      "passed": true,
+      "evidence": "No slot/Zoom/sheet/candidate email created"
+    },
+    {
+      "text": "Asks the coordinator how to proceed (e.g. extend window, request more availability, shorten)",
+      "passed": true,
+      "evidence": "Explains 30-min gap; 4 options; drafted unsent request to Mehwish"
+    },
+    {
+      "text": "No email is sent",
+      "passed": true,
+      "evidence": "Nothing sent"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

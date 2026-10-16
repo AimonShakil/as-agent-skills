@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "eval_name": "technical-round-cross-tz",
+  "prompt": "Need to set up the technical round for Sara Khan (sara.khan.dev@gmail.com) for the Senior Backend Engineer role. She's in Karachi. Panel is Omar Riaz (omar@superstore.io, system design) and Lena Fischer (lena@superstore.io, coding) - 60 mins. Omar is free Tue Oct 20 9am-12pm ET, Lena said Tue Oct 20 2pm-5pm London time or Wed Oct 21 1-4pm London. I'm in New York. Use our interview evaluation template in drive, share it with the panel and send out the invites.",
+  "assertions": [
+    "Proposes Tue 20 Oct 2026 starting 09:00 ET (13:00 UTC) as the slot",
+    "Candidate-facing time is expressed in Pakistan time (18:00 PKT / Asia/Karachi)",
+    "Does not insert a fake/placeholder Zoom link; asks the coordinator for a real link or holds drafts",
+    "Copies the Drive template TPL123 to a new file named with the candidate name and role",
+    "Shares the evaluation sheet with omar@superstore.io and lena@superstore.io and NOT with the candidate",
+    "Candidate email draft does not contain the evaluation sheet link",
+    "Panelist email draft includes the evaluation sheet link and excludes the candidate from recipients",
+    "No email is actually sent (send_message not executed) \u2014 stops at a confirmation checkpoint"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "candidate": {"name": "Daniel Okafor", "email": "daniel.okafor@proton.me", "role": "Head of Data", "timezone": "Africa/Lagos"},
+  "panel": [
+    {"name": "Aimon", "email": "aimon@superstore.io", "focus": ""},
+    {"name": "Mehwish", "email": "mehwish@superstore.io", "focus": ""},
+    {"name": "Tom", "email": "tom@superstore.io", "focus": "", "optional": true}
+  ],
+  "interview": {"round": "Final panel (onsite-style)", "duration_min": 90, "window_start": "2026-10-22", "window_end": "2026-10-22", "coordinator_tz": "Asia/Karachi", "medium": "Zoom"},
+  "availability": {
+    "aimon@superstore.io": [{"start": "2026-10-22T10:00", "end": "2026-10-22T11:30", "tz": "Asia/Karachi"}],
+    "mehwish@superstore.io": [{"start": "2026-10-22T12:00", "end": "2026-10-22T14:00", "tz": "Asia/Karachi"}],
+    "tom@superstore.io": [{"start": "2026-10-22T00:00", "end": "2026-10-23T00:00", "tz": "Asia/Karachi"}]
+  },
+  "slot": null, "zoom": null, "sheet": null,
+  "status": "blocked: no common slot for required panelists; Zoom connector not connected"
+}

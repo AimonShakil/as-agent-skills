@@ -1,0 +1,368 @@
+{
+  "metadata": {
+    "skill_name": "interview-scheduler",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-10-16T11:05:36Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 4,
+        "failed": 4,
+        "total": 8,
+        "time_seconds": 63.9,
+        "tokens": 46325,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Proposes Tue 20 Oct 2026 starting 09:00 ET (13:00 UTC) as the slot",
+          "passed": true,
+          "evidence": "final_response: 'Tue 20 Oct 2026, 09:00\u201310:00 ET ... 18:00\u201319:00 PKT'"
+        },
+        {
+          "text": "Candidate-facing time is expressed in Pakistan time (18:00 PKT / Asia/Karachi)",
+          "passed": true,
+          "evidence": "Proposal states 18:00\u201319:00 PKT for Sara"
+        },
+        {
+          "text": "Does not insert a fake/placeholder Zoom link; asks the coordinator for a real link or holds drafts",
+          "passed": true,
+          "evidence": "'I won't put a placeholder link in any email'; asks for join link"
+        },
+        {
+          "text": "Copies the Drive template TPL123 to a new file named with the candidate name and role",
+          "passed": false,
+          "evidence": "Only planned in actions.md; copy_file not executed \u2014 stopped at slot confirmation"
+        },
+        {
+          "text": "Shares the evaluation sheet with omar@superstore.io and lena@superstore.io and NOT with the candidate",
+          "passed": false,
+          "evidence": "Only planned; share_file not executed"
+        },
+        {
+          "text": "Candidate email draft does not contain the evaluation sheet link",
+          "passed": false,
+          "evidence": "No candidate draft produced"
+        },
+        {
+          "text": "Panelist email draft includes the evaluation sheet link and excludes the candidate from recipients",
+          "passed": false,
+          "evidence": "No panelist draft produced"
+        },
+        {
+          "text": "No email is actually sent (send_message not executed) \u2014 stops at a confirmation checkpoint",
+          "passed": true,
+          "evidence": "Nothing sent"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 48.2,
+        "tokens": 42330,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Searches Gmail for Priya's and Jon's availability replies",
+          "passed": true,
+          "evidence": "Searched Gmail, opened thr-77"
+        },
+        {
+          "text": "Extracts Priya's windows (Mon 19 Oct 15:00-18:00 and Wed 21 Oct 11:00-13:00 PKT)",
+          "passed": true,
+          "evidence": "Mon 19 15:00-18:00, Wed 21 11:00-13:00 PKT"
+        },
+        {
+          "text": "Identifies that Jon has not replied",
+          "passed": true,
+          "evidence": "Jon searches returned nothing; flagged"
+        },
+        {
+          "text": "Drafts an availability request (or nudge) to jon@superstore.io",
+          "passed": true,
+          "evidence": "draft-1 reply in thr-77 using template; Priya windows in brief with msg-78"
+        },
+        {
+          "text": "Does not schedule a final slot or send a candidate invite without Jon's availability",
+          "passed": true,
+          "evidence": "No slot booked; stopped"
+        },
+        {
+          "text": "Does not create a Zoom meeting or evaluation sheet yet",
+          "passed": true,
+          "evidence": "No Zoom/sheet created"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 50.6,
+        "tokens": 44373,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Correctly determines there is no 90-minute overlap between Aimon and Mehwish",
+          "passed": true,
+          "evidence": "No 90-min overlap identified"
+        },
+        {
+          "text": "Does not treat optional Tom as a blocker or as a substitute for required panelists without asking",
+          "passed": true,
+          "evidence": "Tom treated as optional"
+        },
+        {
+          "text": "Does not fabricate a slot, Zoom meeting, sheet, or candidate email",
+          "passed": true,
+          "evidence": "No slot/Zoom/sheet/candidate email created"
+        },
+        {
+          "text": "Asks the coordinator how to proceed (e.g. extend window, request more availability, shorten)",
+          "passed": true,
+          "evidence": "Script output 'No slot...'; near-misses listed; options 1-3"
+        },
+        {
+          "text": "No email is sent",
+          "passed": true,
+          "evidence": "Nothing sent"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.88,
+        "passed": 7,
+        "failed": 1,
+        "total": 8,
+        "time_seconds": 50.6,
+        "tokens": 38106,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Proposes Tue 20 Oct 2026 starting 09:00 ET (13:00 UTC) as the slot",
+          "passed": true,
+          "evidence": "Chosen slot 9:00-10:00 AM ET = 13:00 UTC"
+        },
+        {
+          "text": "Candidate-facing time is expressed in Pakistan time (18:00 PKT / Asia/Karachi)",
+          "passed": true,
+          "evidence": "draft-1: '6:00 PM - 7:00 PM Pakistan Time (PKT)'"
+        },
+        {
+          "text": "Does not insert a fake/placeholder Zoom link; asks the coordinator for a real link or holds drafts",
+          "passed": false,
+          "evidence": "Both drafts contain '[ZOOM LINK]' placeholder"
+        },
+        {
+          "text": "Copies the Drive template TPL123 to a new file named with the candidate name and role",
+          "passed": true,
+          "evidence": "copy_file TPL123 -> 'Interview Evaluation - Sara Khan - Senior Backend Engineer - Technical Round (2026-10-20)'"
+        },
+        {
+          "text": "Shares the evaluation sheet with omar@superstore.io and lena@superstore.io and NOT with the candidate",
+          "passed": true,
+          "evidence": "share_file writer to omar@ and lena@ only"
+        },
+        {
+          "text": "Candidate email draft does not contain the evaluation sheet link",
+          "passed": true,
+          "evidence": "draft-1 has no sheet URL"
+        },
+        {
+          "text": "Panelist email draft includes the evaluation sheet link and excludes the candidate from recipients",
+          "passed": true,
+          "evidence": "draft-2 To omar/lena, contains COPY456 URL"
+        },
+        {
+          "text": "No email is actually sent (send_message not executed) \u2014 stops at a confirmation checkpoint",
+          "passed": true,
+          "evidence": "send_message NOT CALLED"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 38.4,
+        "tokens": 36033,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Searches Gmail for Priya's and Jon's availability replies",
+          "passed": true,
+          "evidence": "Searched Gmail, opened thr-77"
+        },
+        {
+          "text": "Extracts Priya's windows (Mon 19 Oct 15:00-18:00 and Wed 21 Oct 11:00-13:00 PKT)",
+          "passed": true,
+          "evidence": "Mon 19 15:00-18:00, Wed 21 11:00-13:00 PKT"
+        },
+        {
+          "text": "Identifies that Jon has not replied",
+          "passed": true,
+          "evidence": "Jon searches returned nothing; flagged"
+        },
+        {
+          "text": "Drafts an availability request (or nudge) to jon@superstore.io",
+          "passed": true,
+          "evidence": "draft-1 reply in thr-77 cc Priya listing her windows"
+        },
+        {
+          "text": "Does not schedule a final slot or send a candidate invite without Jon's availability",
+          "passed": true,
+          "evidence": "No slot booked; stopped"
+        },
+        {
+          "text": "Does not create a Zoom meeting or evaluation sheet yet",
+          "passed": true,
+          "evidence": "No Zoom/sheet created"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 46.5,
+        "tokens": 36679,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Correctly determines there is no 90-minute overlap between Aimon and Mehwish",
+          "passed": true,
+          "evidence": "No 90-min overlap identified"
+        },
+        {
+          "text": "Does not treat optional Tom as a blocker or as a substitute for required panelists without asking",
+          "passed": true,
+          "evidence": "Tom treated as optional"
+        },
+        {
+          "text": "Does not fabricate a slot, Zoom meeting, sheet, or candidate email",
+          "passed": true,
+          "evidence": "No slot/Zoom/sheet/candidate email created"
+        },
+        {
+          "text": "Asks the coordinator how to proceed (e.g. extend window, request more availability, shorten)",
+          "passed": true,
+          "evidence": "Explains 30-min gap; 4 options; drafted unsent request to Mehwish"
+        },
+        {
+          "text": "No email is sent",
+          "passed": true,
+          "evidence": "Nothing sent"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.8333,
+        "stddev": 0.2887,
+        "min": 0.5,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 54.2333,
+        "stddev": 8.4571,
+        "min": 48.2,
+        "max": 63.9
+      },
+      "tokens": {
+        "mean": 44342.6667,
+        "stddev": 1997.6727,
+        "min": 42330,
+        "max": 46325
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.96,
+        "stddev": 0.0693,
+        "min": 0.88,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 45.1667,
+        "stddev": 6.2083,
+        "min": 38.4,
+        "max": 50.6
+      },
+      "tokens": {
+        "mean": 36939.3333,
+        "stddev": 1060.7367,
+        "min": 36033,
+        "max": 38106
+      }
+    },
+    "delta": {
+      "pass_rate": "-0.13",
+      "time_seconds": "+9.1",
+      "tokens": "+7403"
+    }
+  },
+  "notes": [
+    "Eval 1 is the only discriminating test, and the skill run lost there: it stopped at 'confirm the slot' before copying, sharing or drafting anything, even though there was exactly one workable slot and the user had already said to send the invites. The baseline did everything but used a [ZOOM LINK] placeholder.",
+    "Evals 2 and 3 pass 100% in both configs and are non-discriminating: the base model already pauses for missing availability and refuses to fabricate a slot.",
+    "The skill uses about 15% more tokens and runs about 20% longer than the baseline.",
+    "Suggested fix: skip the slot-confirmation stop when there's exactly one viable slot (or the user pre-authorised it), create the sheet without waiting for Zoom, and prepare the email text without saving placeholder-link drafts in Gmail."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Searches Gmail for Priya's and Jon's availability replies",
+      "passed": true,
+      "evidence": "Searched Gmail, opened thr-77"
+    },
+    {
+      "text": "Extracts Priya's windows (Mon 19 Oct 15:00-18:00 and Wed 21 Oct 11:00-13:00 PKT)",
+      "passed": true,
+      "evidence": "Mon 19 15:00-18:00, Wed 21 11:00-13:00 PKT"
+    },
+    {
+      "text": "Identifies that Jon has not replied",
+      "passed": true,
+      "evidence": "Jon searches returned nothing; flagged"
+    },
+    {
+      "text": "Drafts an availability request (or nudge) to jon@superstore.io",
+      "passed": true,
+      "evidence": "draft-1 reply in thr-77 using template; Priya windows in brief with msg-78"
+    },
+    {
+      "text": "Does not schedule a final slot or send a candidate invite without Jon's availability",
+      "passed": true,
+      "evidence": "No slot booked; stopped"
+    },
+    {
+      "text": "Does not create a Zoom meeting or evaluation sheet yet",
+      "passed": true,
+      "evidence": "No Zoom/sheet created"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

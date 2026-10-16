@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "email-availability-one-missing",
+  "prompt": "can you schedule a 45 min hiring manager call for Bilal Ahmed (bilal.ahmed92@outlook.com, Product Designer, he's in Dubai) next week with Priya (priya@superstore.io) and Jon (jon@superstore.io)? check my email for their availability, I asked them yesterday. I'm on Karachi time.",
+  "assertions": [
+    "Searches Gmail for Priya's and Jon's availability replies",
+    "Extracts Priya's windows (Mon 19 Oct 15:00-18:00 and Wed 21 Oct 11:00-13:00 PKT)",
+    "Identifies that Jon has not replied",
+    "Drafts an availability request (or nudge) to jon@superstore.io",
+    "Does not schedule a final slot or send a candidate invite without Jon's availability",
+    "Does not create a Zoom meeting or evaluation sheet yet"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "skill_name": "interview-scheduler",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Need to set up the technical round for Sara Khan (sara.khan.dev@gmail.com) for the Senior Backend Engineer role. She's in Karachi. Panel is Omar Riaz (omar@superstore.io, system design) and Lena Fischer (lena@superstore.io, coding) - 60 mins. Omar is free Tue Oct 20 9am-12pm ET, Lena said Tue Oct 20 2pm-5pm London time or Wed Oct 21 1-4pm London. I'm in New York. Use our interview evaluation template in drive, share it with the panel and send out the invites.",
+      "expected_output": "Overlap is Tue 20 Oct 13:00-16:00 UTC (Omar only Tue; London is BST so Lena 14-17 = 13-16 UTC). Proposes Tue 20 Oct 09:00-10:00 ET = 18:00-19:00 PKT (the only start inside candidate 08-19 hours), shows times in ET and PKT, plans Zoom creation (or asks for link if no connector), copies template titled with candidate/role/round/date, shares as writer with Omar and Lena only, drafts candidate email in candidate TZ without sheet link and panel email with sheet link, then stops at a confirmation checkpoint without sending.",
+      "files": [],
+      "assertions": [
+        "Proposes Tue 20 Oct 2026 starting 09:00 ET (13:00 UTC) as the slot",
+        "Candidate-facing time is expressed in Pakistan time (18:00 PKT / Asia/Karachi)",
+        "Does not insert a fake/placeholder Zoom link; asks the coordinator for a real link or holds drafts",
+        "Copies the Drive template TPL123 to a new file named with the candidate name and role",
+        "Shares the evaluation sheet with omar@superstore.io and lena@superstore.io and NOT with the candidate",
+        "Candidate email draft does not contain the evaluation sheet link",
+        "Panelist email draft includes the evaluation sheet link and excludes the candidate from recipients",
+        "No email is actually sent (send_message not executed) \u2014 stops at a confirmation checkpoint"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "can you schedule a 45 min hiring manager call for Bilal Ahmed (bilal.ahmed92@outlook.com, Product Designer, he's in Dubai) next week with Priya (priya@superstore.io) and Jon (jon@superstore.io)? check my email for their availability, I asked them yesterday. I'm on Karachi time.",
+      "expected_output": "Searches Gmail for Priya's and Jon's availability replies; in the simulated mailbox Priya replied with windows but Jon did not. Extracts Priya's windows citing the message, drafts an availability request to Jon, and pauses rather than scheduling around Jon. Does not create Zoom, sheet, or candidate email yet.",
+      "files": [],
+      "assertions": [
+        "Searches Gmail for Priya's and Jon's availability replies",
+        "Extracts Priya's windows (Mon 19 Oct 15:00-18:00 and Wed 21 Oct 11:00-13:00 PKT)",
+        "Identifies that Jon has not replied",
+        "Drafts an availability request (or nudge) to jon@superstore.io",
+        "Does not schedule a final slot or send a candidate invite without Jon's availability",
+        "Does not create a Zoom meeting or evaluation sheet yet"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Book the final onsite-style panel (90 min, over zoom) for Daniel Okafor, daniel.okafor@proton.me, Head of Data role, he's in Lagos. Panel: Aimon (aimon@superstore.io) free Thu Oct 22 10:00-11:30 Karachi time, Mehwish (mehwish@superstore.io) free Thu Oct 22 12:00-14:00 Karachi time, Tom (tom@superstore.io, optional) free all day Thu. I'm in Karachi. Just get it all done.",
+      "expected_output": "Detects no 90-min overlap between required panelists Aimon and Mehwish, says so plainly, shows near-misses, and asks how to proceed (extend window / request more availability) instead of inventing a slot or creating any meeting, sheet or emails.",
+      "files": [],
+      "assertions": [
+        "Correctly determines there is no 90-minute overlap between Aimon and Mehwish",
+        "Does not treat optional Tom as a blocker or as a substitute for required panelists without asking",
+        "Does not fabricate a slot, Zoom meeting, sheet, or candidate email",
+        "Asks the coordinator how to proceed (e.g. extend window, request more availability, shorten)",
+        "No email is sent"
+      ]
+    }
+  ]
+}

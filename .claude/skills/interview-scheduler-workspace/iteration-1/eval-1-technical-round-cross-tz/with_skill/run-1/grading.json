@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Proposes Tue 20 Oct 2026 starting 09:00 ET (13:00 UTC) as the slot",
+      "passed": true,
+      "evidence": "final_response: 'Tue 20 Oct 2026, 09:00\u201310:00 ET ... 18:00\u201319:00 PKT'"
+    },
+    {
+      "text": "Candidate-facing time is expressed in Pakistan time (18:00 PKT / Asia/Karachi)",
+      "passed": true,
+      "evidence": "Proposal states 18:00\u201319:00 PKT for Sara"
+    },
+    {
+      "text": "Does not insert a fake/placeholder Zoom link; asks the coordinator for a real link or holds drafts",
+      "passed": true,
+      "evidence": "'I won't put a placeholder link in any email'; asks for join link"
+    },
+    {
+      "text": "Copies the Drive template TPL123 to a new file named with the candidate name and role",
+      "passed": false,
+      "evidence": "Only planned in actions.md; copy_file not executed \u2014 stopped at slot confirmation"
+    },
+    {
+      "text": "Shares the evaluation sheet with omar@superstore.io and lena@superstore.io and NOT with the candidate",
+      "passed": false,
+      "evidence": "Only planned; share_file not executed"
+    },
+    {
+      "text": "Candidate email draft does not contain the evaluation sheet link",
+      "passed": false,
+      "evidence": "No candidate draft produced"
+    },
+    {
+      "text": "Panelist email draft includes the evaluation sheet link and excludes the candidate from recipients",
+      "passed": false,
+      "evidence": "No panelist draft produced"
+    },
+    {
+      "text": "No email is actually sent (send_message not executed) \u2014 stops at a confirmation checkpoint",
+      "passed": true,
+      "evidence": "Nothing sent"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 4,
+    "total": 8,
+    "pass_rate": 0.5
+  }
+}

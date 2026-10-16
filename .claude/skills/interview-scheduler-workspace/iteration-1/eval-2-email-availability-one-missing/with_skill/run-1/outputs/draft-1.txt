@@ -1,0 +1,15 @@
+Draft ID: draft-1
+Status: NOT SENT (awaiting coordinator approval)
+Thread: reply in existing thread thr-77 (so Jon sees it alongside the original ask)
+To: jon@superstore.io
+Cc: (none)
+Subject: Re: Availability for Bilal Ahmed - Product Designer HM call
+
+Body:
+Hi Jon,
+
+Quick follow-up on my note from yesterday. We're scheduling a 45-minute hiring manager call with Bilal Ahmed for the Product Designer role, sometime between Mon 19 Oct and Fri 23 Oct 2026.
+
+Could you reply with two or three windows that work for you, including your time zone? For example: "Mon 19 Oct 15:00-18:00 PKT, Wed 21 Oct 11:00-13:00 PKT".
+
+Thanks,

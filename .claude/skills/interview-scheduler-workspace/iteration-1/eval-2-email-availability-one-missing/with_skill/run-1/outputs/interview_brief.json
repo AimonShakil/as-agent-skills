@@ -1,0 +1,17 @@
+{
+  "candidate": {"name": "Bilal Ahmed", "email": "bilal.ahmed92@outlook.com", "role": "Product Designer", "timezone": "Asia/Dubai"},
+  "panel": [
+    {"name": "Priya", "email": "priya@superstore.io", "focus": ""},
+    {"name": "Jon", "email": "jon@superstore.io", "focus": ""}
+  ],
+  "interview": {"round": "Hiring Manager", "duration_min": 45, "window_start": "2026-10-19", "window_end": "2026-10-23", "coordinator_tz": "Asia/Karachi"},
+  "availability": {
+    "priya@superstore.io": [
+      {"start": "2026-10-19T15:00", "end": "2026-10-19T18:00", "tz": "Asia/Karachi", "source": "Gmail thr-77 / msg-78 (2026-10-15 16:40 PKT)"},
+      {"start": "2026-10-21T11:00", "end": "2026-10-21T13:00", "tz": "Asia/Karachi", "source": "Gmail thr-77 / msg-78 (2026-10-15 16:40 PKT)"}
+    ]
+  },
+  "pending_availability": ["jon@superstore.io"],
+  "slot": null, "zoom": null, "sheet": null,
+  "notes": "Jon has not replied to thr-77 (sent 2026-10-15); follow-up drafted as draft-1, unsent pending coordinator approval. No Zoom connector connected; coordinator will need to supply a join link once slot is confirmed."
+}

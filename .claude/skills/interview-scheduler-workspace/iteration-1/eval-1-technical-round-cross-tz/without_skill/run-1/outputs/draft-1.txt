@@ -1,0 +1,28 @@
+Draft id: draft-1
+Status: DRAFT - NOT SENT (waiting on meeting link + user go-ahead)
+To: sara.khan.dev@gmail.com
+Cc: (none)
+Subject: Technical Interview - Senior Backend Engineer at Super Store - Tue Oct 20, 6:00 PM PKT
+
+Hi Sara,
+
+Thank you for your interest in the Senior Backend Engineer role at Super Store. We'd like to invite you to the technical interview round.
+
+When: Tuesday, October 20, 2026, 6:00 PM - 7:00 PM Pakistan Time (PKT)
+      (9:00 - 10:00 AM US Eastern / 2:00 - 3:00 PM London)
+Duration: 60 minutes
+Where: Zoom - [ZOOM LINK]
+
+You'll be meeting with:
+- Omar Riaz - system design
+- Lena Fischer - coding
+
+Please have a stable internet connection, a working camera and microphone, and be ready to share your screen for the coding portion.
+
+If this time doesn't work for you, just reply and we'll find an alternative.
+
+Looking forward to speaking with you.
+
+Best regards,
+[Your name]
+Super Store Recruiting

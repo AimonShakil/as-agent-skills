@@ -1,0 +1,31 @@
+Draft id: draft-2
+Status: DRAFT - NOT SENT (waiting on meeting link + user go-ahead)
+To: omar@superstore.io, lena@superstore.io
+Cc: (none)
+Subject: Panel briefing: Sara Khan - Senior Backend Engineer technical round - Tue Oct 20, 9:00 AM ET / 2:00 PM London
+
+Hi Omar and Lena,
+
+Thanks for making time. Here are the details for Sara Khan's technical round.
+
+Candidate: Sara Khan (sara.khan.dev@gmail.com) - based in Karachi
+Role: Senior Backend Engineer
+When: Tuesday, October 20, 2026
+  - Omar: 9:00 - 10:00 AM ET (New York)
+  - Lena: 2:00 - 3:00 PM London (BST)
+  - Candidate: 6:00 - 7:00 PM Karachi (PKT)
+Duration: 60 minutes
+Zoom: [ZOOM LINK]
+
+Suggested split:
+- ~5 min intros
+- ~25 min system design (Omar)
+- ~25 min coding (Lena)
+- ~5 min candidate questions
+
+Evaluation sheet (shared with you both, edit access):
+https://docs.google.com/spreadsheets/d/COPY456
+Please fill in your section independently right after the interview, before discussing with each other.
+
+Thanks!
+[Your name]
